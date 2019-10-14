@@ -5,9 +5,11 @@ First make sure your Raspberry pi is functioning properly
 The following protocol i used to implement the project:
 1.OpenVPN
 2.Samba
-3.NFS
+3.XRDP
+4.VNC
 
 SETUP OPENVPN
+
 To set up the OpenVPN. First go to pivpn website which is www.pivpn.io. You will see the url for the installation of the OpenVPN. Copy the installation. Paste the url in the terminal of the RaspberryPi. After you enter the url in the terminal , it install the package of the OpenVPN. 
 Since, we are using Pi as a server, we need static IP address. In the next step, we are given the option to set up the static IP address. After setting up the Static IP address, do not forget to copy the IP address of the IP address. It will be later used to configure your router. 
 After this, you will be given the option to pick the user, select the user as you want which will hold your ovpn configuration. After this, you will be asked what protocol you can use. You have option to pick UDP or TCP. Write the port number which you select. You will be asked to select the type of the encryption. The higer bit you go, the more secure you will be. You can use 256 bit which is secure. 
@@ -21,12 +23,15 @@ Enter the password for the Client: <enter the password>
 You have successfully created <your user name>.ovpn. It also create a ovpn file. This file is a certificate which is used to connect your client to the Pi using VPN tunnel. 
 You can locate the file in /home/pi/opvpn. Save the certificate for later use. 
 PORT FORWARDING
+  
 The port which we use for the VPN which is either TCP and UDP should be opened in the router. 
 
 INSTALL OpenVPN IN THE CLIENT COMPUTER
+
 After you install the OpenVPN, import the certificate you saved. You can now use username and password to connect to the PI server. 
 
 INSTALL Samba File Share in PI and access from WINDOWS
+
 To set up a shared folder on a Linux that Windows to access, start with installing Samba (software that provides access to SMB/CIFS protocols used by Windows). At the terminal, use the following command:
 sudo apt-get install samba
 smbpasswd -a <username>
@@ -56,6 +61,7 @@ To access the share from the window device
 \\IP address of the Pi\Share
 
 INSTALL XRDP and VNC and VPN TO ACCESS DESKTOP OF PI
+
 VNC
 Enter sudo raspi-config at the command prompt to access it.
 Then select “Interfacing Options” from the menu.
