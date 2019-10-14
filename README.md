@@ -63,11 +63,13 @@ To access the share from the window device
 INSTALL XRDP and VNC and VPN TO ACCESS DESKTOP OF PI
 
 VNC
+
 Enter sudo raspi-config at the command prompt to access it.
 Then select “Interfacing Options” from the menu.
 Then select “VNC”, to enable VNC.
 Install VNC Viewer in the client computer to access the PI interface. 
 XRDP
+
 Enter sudo apt-get install xrdp to install the XRDP service.
 Now, on your Windows computer, open up the Remote Desktop Connection application. This is a Windows app, so it should already be on your computer. Now enter the local IP address of your Raspberry Pi to connect to the PI.
 
