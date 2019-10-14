@@ -68,6 +68,7 @@ Enter sudo raspi-config at the command prompt to access it.
 Then select “Interfacing Options” from the menu.
 Then select “VNC”, to enable VNC.
 Install VNC Viewer in the client computer to access the PI interface. 
+
 XRDP
 
 Enter sudo apt-get install xrdp to install the XRDP service.
